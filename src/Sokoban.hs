@@ -18,9 +18,9 @@ import Text.Parsec
 import Text.Parsec.Text (Parser)
 import Text.Pretty.Simple (pPrint)
 
------------
--- Tile show and read functions --
------------
+-------------------------------------------------
+-- Tile definition and show and read functions --
+-------------------------------------------------
 
 data Pos = Pos
   { posRow :: Natural
@@ -54,9 +54,9 @@ readTileType = parse tileTypeParser ""
 
 data Tile = Tile Pos TileType deriving (Eq, Read, Show)
 
------------------------------------
--- Board show and read functions --
------------------------------------
+-------------------------------------------
+-- Board def and show and read functions --
+-------------------------------------------
 
 newtype Board = Board { unBoard :: Vector Tile } deriving (Eq, Read, Show)
 
